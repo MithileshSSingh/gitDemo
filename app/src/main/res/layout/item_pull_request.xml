@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="5dp"
+        android:elevation="6dp"
+        app:cardCornerRadius="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="10dp">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="# title title title aldjfalkj dlkfl adl fljalksd flkjalsdj" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_profile_pic"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_title"
+                app:srcCompat="@drawable/ic_profile_pic_logo" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_created_at"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/created_at"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/iv_profile_pic"
+                app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_created_at_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/tv_created_at"
+                app:layout_constraintTop_toTopOf="@id/tv_created_at"
+                tools:text="21 Jan 2022" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_closed_at"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/closed_at"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/tv_created_at"
+                app:layout_constraintEnd_toEndOf="@id/tv_created_at"
+                app:layout_constraintTop_toBottomOf="@id/tv_created_at" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_closed_at_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/tv_closed_at"
+                app:layout_constraintTop_toTopOf="@id/tv_closed_at"
+                tools:text="21 Jan 2022" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="start"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/iv_profile_pic"
+                android:text="@string/user_name"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
